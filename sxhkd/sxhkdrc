@@ -8,6 +8,15 @@ super + Return
 super + shift + enter
        xfce4-terminal
 
+##---------- Useful tools custom ----------##
+
+# DOES NOT WORK
+super + shift + c
+	gnome-terminal -x bash /home/anon/Scripts/misc/sxkdcheat.sh
+
+super + l
+	xsecurelock
+
 ##---------- Rofi Launcher & Menus ----------##
 
 # Rofi App Launcher
@@ -55,7 +64,7 @@ super + shift + o
 
 # Take a screenshot
 Print
-	takeshot --now
+	scrot
 	
 # Take screenshot in 5 second
 alt + Print	

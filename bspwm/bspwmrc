@@ -22,6 +22,8 @@ xsetroot -cursor_name left_ptr
 
 nitrogen --restore &
 
+lxsession lxpolkit &
+
 picom --config ~/.config/picom/picom.conf &
 
 xfce4-power-manager &
