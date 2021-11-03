@@ -15,6 +15,11 @@ bspc rule -a alacritty desktop '1' follow=on focus=on
 bspc rule -a firefox desktop'2' follow=on focus=on
 bspc rule -a mpv desktop '7' follow=on focus=on
 
+# enable mouse for floating windows
+bspc config pointer_action1 move
+bspc config pointer_action2 resize_side
+bspc config pointer_action3 resize_corner
+
 killall -9 sxhkd dunst xfce4-power-manager
 
 sxhkd &

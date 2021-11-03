@@ -17,6 +17,12 @@ super + shift + c
 super + l
 	xsecurelock
 
+super + alt + s
+        systemctl suspend
+
+super + ctrl + {p,y}
+   alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e playerctl {pause, play}
+
 ##---------- Rofi Launcher & Menus ----------##
 
 # Rofi App Launcher
@@ -29,9 +35,8 @@ super + n
 
 
 # Rofi Menus/Applets
-super + l
+super + o
       poweroff
-
 
 super + m 
        reboot
@@ -52,6 +57,10 @@ super + shift + {f,w,}
 ctrl + alt + {v,r,h}
 	alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e {vim,ranger,htop}
 
+# Open sxhkd config
+ctrl + alt + k
+	alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e bash ~/Scripts/autosxhkd.sh
+
 ##---------- System Keys ----------##
 
 # Set keyboard lights on
@@ -64,7 +73,7 @@ super + shift + o
 
 # Take a screenshot
 Print
-	scrot
+	scrot ~/Pictures/screenshots/
 	
 # Take screenshot in 5 second
 alt + Print	
@@ -98,7 +107,7 @@ XF86Audio{Next,Prev,Play,Stop}
 	mpc {next,prev,toggle,stop}
 
 # Mouse move windows
-uper + button{1,2,3}
+super + button{1,2,3}
     bspc grab_pointer {move,resize_side,resize_corner}
 
 super + !button{1,2,3}
