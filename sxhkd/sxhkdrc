@@ -41,6 +41,9 @@ super + o
 super + m 
        reboot
 
+super + i
+	bspc quit
+
 super + r
       dmenu_run
 
@@ -73,7 +76,7 @@ super + shift + o
 
 # Take a screenshot
 Print
-	scrot ~/Pictures/screenshots/
+	scrot ~/Pictures/screenshots/.png
 	
 # Take screenshot in 5 second
 alt + Print	
@@ -179,7 +182,10 @@ super + {Tab,grave}
 
 # Send focused window to another workspace
 super + {_,shift + }{1-8}
-	bspc {desktop -f,node -d} '^{1-8}'
+	bspc {desktop -f,node -d} '^{1-8}
+# Go to specific workspace
+super + alt + {1-9}
+    id=$(bspc query -N -n); bspc node -d ^{1-9}; bspc node -f ${id}
 
 # Expanding windows
 super + control + {Left,Right,Up,Down}

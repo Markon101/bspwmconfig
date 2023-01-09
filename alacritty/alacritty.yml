@@ -13,7 +13,7 @@ import:
 ## Set environment variables
 env:
   TERM: alacritty
-  WINIT_X11_SCALE_FACTOR: '1.0'
+  WINIT_X11_SCALE_FACTOR: '2.5'
 
 ## Terminal window settings
 window:
@@ -28,13 +28,12 @@ window:
   decorations: full
   startup_mode: Windowed
   dynamic_title: true
+  opacity: 0.8
+
 
 ## scrolling
   history: 10000
   multiplier: 3
-
-## Background opacity
-background_opacity: 0.8
 
 ## Cursor
 cursor:
